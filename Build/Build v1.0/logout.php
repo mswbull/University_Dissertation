@@ -1,0 +1,1 @@
+<?php	session_start();	session_destroy();	header("Location: login.php");	$message="You have successfully logged out.";	header("Location: login.php?lo_message=$message");	exit();?>

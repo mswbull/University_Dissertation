@@ -1,0 +1,356 @@
+-- phpMyAdmin SQL Dump
+-- version 2.6.3-pl1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Feb 22, 2007 at 03:03 PM
+-- Server version: 4.1.18
+-- PHP Version: 5.0.4
+-- 
+-- Database: `dorneyscc`
+-- 
+CREATE DATABASE `dorneyscc` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE dorneyscc;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `PickList`
+-- 
+
+CREATE TABLE `PickList` (
+  `pick_id` int(10) unsigned NOT NULL auto_increment,
+  `pick_title` varchar(100) character set hp8 NOT NULL default '',
+  `pick_name` varchar(100) character set hp8 NOT NULL default '',
+  `pick_value` varchar(100) character set hp8 NOT NULL default '',
+  PRIMARY KEY  (`pick_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
+
+-- 
+-- Dumping data for table `PickList`
+-- 
+
+INSERT INTO `PickList` VALUES (10, 'association', 'HDARA', 'HDARA');
+INSERT INTO `PickList` VALUES (9, 'association', 'CARA', 'CARA');
+INSERT INTO `PickList` VALUES (4, 'level', 'Full', 'Full');
+INSERT INTO `PickList` VALUES (5, 'level', 'Club', 'Club');
+INSERT INTO `PickList` VALUES (32, 'result', '8th', '8th');
+INSERT INTO `PickList` VALUES (11, 'association', 'WEARA', 'WEARA');
+INSERT INTO `PickList` VALUES (30, 'result', '6th', '6th');
+INSERT INTO `PickList` VALUES (31, 'result', '7th', '7th');
+INSERT INTO `PickList` VALUES (25, 'result', '1st', '1st');
+INSERT INTO `PickList` VALUES (26, 'result', '2nd', '2nd');
+INSERT INTO `PickList` VALUES (27, 'result', '3rd', '3rd');
+INSERT INTO `PickList` VALUES (28, 'result', '4th', '4th');
+INSERT INTO `PickList` VALUES (29, 'result', '5th', '5th');
+INSERT INTO `PickList` VALUES (22, 'designation', 'A', 'A');
+INSERT INTO `PickList` VALUES (23, 'designation', 'B', 'B');
+INSERT INTO `PickList` VALUES (24, 'designation', 'C', 'C');
+INSERT INTO `PickList` VALUES (33, 'result', '9th', '9th');
+INSERT INTO `PickList` VALUES (34, 'result', '10th', '10th');
+INSERT INTO `PickList` VALUES (35, 'result', '11th', '11th');
+INSERT INTO `PickList` VALUES (36, 'result', '12th', '12th');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `admin`
+-- 
+
+CREATE TABLE `admin` (
+  `admin_id` int(8) NOT NULL auto_increment,
+  `username` varchar(32) character set hp8 NOT NULL default '',
+  `password` varchar(32) character set hp8 NOT NULL default '',
+  `admin_forename` varchar(32) character set hp8 NOT NULL default '',
+  `admin_surname` varchar(32) character set hp8 NOT NULL default '',
+  `admin_addressone` varchar(255) character set hp8 NOT NULL default '',
+  `admin_addresstwo` varchar(255) character set hp8 NOT NULL default '',
+  `admin_city` varchar(255) character set hp8 NOT NULL default '',
+  `admin_county` varchar(255) character set hp8 NOT NULL default '',
+  `admin_postcode` varchar(32) character set hp8 NOT NULL default '',
+  `admin_phone` varchar(32) character set hp8 NOT NULL default '',
+  `admin_email` varchar(255) character set hp8 NOT NULL default '',
+  `admin_club` varchar(32) character set hp8 NOT NULL default '',
+  `admin_level` varchar(4) character set hp8 NOT NULL default '',
+  PRIMARY KEY  (`admin_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=99 ;
+
+-- 
+-- Dumping data for table `admin`
+-- 
+
+INSERT INTO `admin` VALUES (60, 'mswbull', 'pass', 'Matthew', 'Bull', '27 Easter Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH9 1SW', '07966192220', 'mswbull@gmail.com', 'Ryde', 'Full');
+INSERT INTO `admin` VALUES (88, 'jbond', 'pass', 'Jon', 'Bond', '27 Easter Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH9 1SW', '077476832', 'jbond@email.com', 'Poole', 'Club');
+INSERT INTO `admin` VALUES (87, 'scbull', 'pass', 'Steve', 'Bull', '10 Brookfield Gardens', 'Binstead', 'Ryde', 'Isle of Wight', 'PO33 3NP', '01983 566481', 'scbull@email.com', 'Ryde', 'Club');
+INSERT INTO `admin` VALUES (89, 'omcphee', 'pass', 'Ollie', 'McPhee', '27 Easter Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH9 1SW', '077358437', 'omcphee@email.com', 'Bexhill', 'Club');
+INSERT INTO `admin` VALUES (90, 'jbate', 'pass', 'James', 'Bate', '24 Arlington Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH4 STQ', '077356856', 'jbate@email.com', 'Bideford', 'Club');
+INSERT INTO `admin` VALUES (91, 'cpettigrew', 'pass', 'Chris', 'Pettigrew', '27 Easter Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH9 1SW', '073468741', 'cpettigrew@email.com', 'BTC', 'Club');
+INSERT INTO `admin` VALUES (92, 'msimmons', 'pass', 'Matthew', 'Simmons', '27 Easter Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH9 1SW', '077367482', 'msimmons@email.com', 'Hastings', 'Club');
+INSERT INTO `admin` VALUES (93, 'smorris', 'pass', 'Sarah', 'Morris', '27 Easter Road', 'Moordown', 'Bournemouth', 'Dorset', 'BH9 1SW', '0735627531', 'smorris@email.com', 'Eastbourne', 'Club');
+INSERT INTO `admin` VALUES (94, 'nwells', 'pass', 'Nick', 'Wells', '2 Hepplewhite Drive', 'Hatch Warren', 'Basingstoke', 'Hampshire', 'BH1 273', '01256 471707', 'nwells@email.com', 'Plymouth', 'Club');
+INSERT INTO `admin` VALUES (95, 'jdoughty', 'pass', 'James', 'Doughty', '2 Hepplewhite Drive', 'Hatch Warren', 'Basingstoke', 'Hampshire', 'BH2 34W', '073457252', 'jdoughty@email.com', 'Castle Dore', 'Club');
+INSERT INTO `admin` VALUES (96, 'cwilson', 'pass', 'Chris', 'Wilson', '2 Hepplewhite Drive', 'Hatch Warren', 'Basingstoke', 'Hampshire', 'BH2 S3X', '07274364711', 'cwilson@email.com', 'Bmouth', 'Club');
+INSERT INTO `admin` VALUES (98, 'test', 'pass', 'frfrs', 'frrf', 'dfsd', 'dfssdf', 'sdf', 'sdf', 'sdf', 'sdffd', 'edf@email.com', 'Southsea', 'Club');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `club`
+-- 
+
+CREATE TABLE `club` (
+  `club_id` int(8) unsigned NOT NULL auto_increment,
+  `club_name` varchar(32) character set hp8 NOT NULL default '',
+  `club_association` varchar(32) character set hp8 NOT NULL default '',
+  PRIMARY KEY  (`club_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+
+-- 
+-- Dumping data for table `club`
+-- 
+
+INSERT INTO `club` VALUES (3, 'Bmouth', 'HDARA');
+INSERT INTO `club` VALUES (2, 'Ryde', 'HDARA');
+INSERT INTO `club` VALUES (4, 'Poole', 'HDARA');
+INSERT INTO `club` VALUES (5, 'Bexhill', 'CARA');
+INSERT INTO `club` VALUES (8, 'Bideford', 'WEARA');
+INSERT INTO `club` VALUES (9, 'BTC', 'HDARA');
+INSERT INTO `club` VALUES (10, 'Hastings', 'CARA');
+INSERT INTO `club` VALUES (11, 'Eastbourne', 'CARA');
+INSERT INTO `club` VALUES (12, 'Plymouth', 'WEARA');
+INSERT INTO `club` VALUES (13, 'Castle Dore', 'WEARA');
+INSERT INTO `club` VALUES (15, 'Southsea', 'HDARA');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `competitor`
+-- 
+
+CREATE TABLE `competitor` (
+  `competitor_id` int(8) unsigned NOT NULL auto_increment,
+  `competitor_bow` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_two` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_three` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_stroke` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_cox` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_sbow` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_stwo` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_sthree` varchar(32) character set hp8 NOT NULL default '',
+  `competitor_sstroke` varchar(32) character set hp8 NOT NULL default '',
+  `crew_id` int(8) NOT NULL default '0',
+  PRIMARY KEY  (`competitor_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=50 ;
+
+-- 
+-- Dumping data for table `competitor`
+-- 
+
+INSERT INTO `competitor` VALUES (1, 'Bill', 'Bill', 'Bill', 'Bill', 'Bill', 'Bob', 'Bob', 'Bob', 'Bob', 1);
+INSERT INTO `competitor` VALUES (2, 'Jon', 'Jon', 'Jon', 'Jon', 'Jon', 'Chris', 'Chris', 'Chris', 'Chris', 2);
+INSERT INTO `competitor` VALUES (3, 'Matt', 'Matt', 'Matt', 'Matt', 'Matt', 'Nick', 'Nick', 'Nick', 'Nick', 3);
+INSERT INTO `competitor` VALUES (4, 'James', 'James', 'James', 'James', 'James', 'Mike', 'Mike', 'Mike', 'Mike', 4);
+INSERT INTO `competitor` VALUES (5, 'Adam', 'Adam', 'Adam', 'Adam', 'Adam', 'Ben', 'Ben', 'Ben', 'Ben', 5);
+INSERT INTO `competitor` VALUES (6, 'Jim', 'Jim', 'Jim', 'Jim', 'Jim', 'Harry', 'Harry', 'Harry', 'Harry', 6);
+INSERT INTO `competitor` VALUES (7, 'Ryan', 'Ryan', 'Ryan', 'Ryan', 'Ryan', 'Chad', 'Chad', 'Chad', 'Chad', 7);
+INSERT INTO `competitor` VALUES (8, 'Peter', 'Peter', 'Peter', 'Peter', 'Peter', 'Simon', 'Simon', 'Simon', 'Simon', 8);
+INSERT INTO `competitor` VALUES (9, 'Flo', 'Flo', 'Flo', 'Flo', 'Flo', 'Alan', 'Alan', 'Alan', 'Alan', 9);
+INSERT INTO `competitor` VALUES (10, 'Dan', 'Dan', 'Dan', 'Dan', 'Dan', 'Ron', 'Ron', 'Ron', 'Ron', 10);
+INSERT INTO `competitor` VALUES (11, 'Matthew Bull', 'Chris Walker', 'Lee Bennett', 'Mike Palin', 'Ash Maitland', 'Chris Walker', 'Matthew Bull', 'Lee Bennett', 'Mike Palin', 11);
+INSERT INTO `competitor` VALUES (12, 'Bill', 'Bill', 'Bill', 'Bill', 'Bill', 'Bob', 'Bob', 'Bob', 'Bob', 12);
+INSERT INTO `competitor` VALUES (13, 'Chris', 'Chris', 'Chris', 'Chris', 'Chris', 'Carl', 'Carl', 'Carl', 'Carl', 13);
+INSERT INTO `competitor` VALUES (14, 'John', 'John', 'John', 'John', 'John', 'Mike', 'Mike', 'Mike', 'Mike', 14);
+INSERT INTO `competitor` VALUES (15, 'Frank', 'Frank', 'Frank', 'Frank', 'Frank', 'Leon', 'Leon', 'Leon', 'Leon', 15);
+INSERT INTO `competitor` VALUES (16, 'Leo', 'Leo', 'Leo', 'Leo', 'Leo', 'Phil', 'Phil', 'Phil', 'Phil', 16);
+INSERT INTO `competitor` VALUES (17, 'Ian', 'Ian', 'Ian', 'Ian', 'Ian', 'Jim', 'Jim', 'Jim', 'Jim', 17);
+INSERT INTO `competitor` VALUES (19, 'Larry', 'Harry', 'Garry', 'Barry', 'Wendy', 'Clive', 'Roger', 'Rufus', 'Julian', 19);
+INSERT INTO `competitor` VALUES (20, 'Bill', 'Bill', 'Bill', 'Bill', 'Bill', 'Cliff', 'Cliff', 'Cliff', 'Cliff', 20);
+INSERT INTO `competitor` VALUES (21, 'Sam', 'Sam', 'Sam', 'Sam', 'Sam', 'Mike', 'Mike', 'Mike', 'Mike', 21);
+INSERT INTO `competitor` VALUES (22, 'James', 'James', 'James', 'James', 'James', 'Dan', 'Dan', 'Dan', 'Dan', 22);
+INSERT INTO `competitor` VALUES (23, 'Simon', 'Simon', 'Simon', 'Simon', 'Simon', 'Shane', 'Shane', 'Shane', 'Shane', 23);
+INSERT INTO `competitor` VALUES (24, 'Jamie', 'Jamie', 'Jamie', 'Jamie', 'Jamie', 'Alex', 'Alex', 'Alex', 'Alex', 24);
+INSERT INTO `competitor` VALUES (25, 'Matt', 'Matt', 'Matt', 'Matt', 'Matt', 'Mike', 'Mike', 'Mike', 'Mike', 25);
+INSERT INTO `competitor` VALUES (26, 'Frank', 'Frank', 'Frank', 'Frank', 'Frank', 'Toby', 'Toby', 'Toby', 'Toby', 26);
+INSERT INTO `competitor` VALUES (27, 'Jack', 'Jack', 'Jack', 'Jack', 'Jack', 'Bill', 'Bill', 'Bill', 'Bill', 27);
+INSERT INTO `competitor` VALUES (28, 'Simon', 'Simon', 'Simon', 'Simon', 'Simon', 'Tom', 'Tom', 'Tom', 'Tom', 28);
+INSERT INTO `competitor` VALUES (29, 'Billy', 'Billy', 'Billy', 'Billy', 'Billy', 'Brad', 'Brad', 'Brad', 'Brad', 29);
+INSERT INTO `competitor` VALUES (30, 'Gary', 'Gary', 'Gary', 'Gary', 'Gary', 'Clark', 'Clark', 'Clark', 'Clark', 30);
+INSERT INTO `competitor` VALUES (31, 'Nick', 'Nick', 'Nick', 'Nick', 'Nick', 'Dan', 'Dan', 'Dan', 'Dan', 31);
+INSERT INTO `competitor` VALUES (32, 'Darren', 'Darren', 'Darren', 'Darren', 'Darren', 'Tom', 'Tom', 'Tom', 'Tom', 32);
+INSERT INTO `competitor` VALUES (33, 'Tiger', 'Tiger', 'Tiger', 'Tiger', 'Tiger', 'Kelvin', 'Kelvin', 'Kelvin', 'Kelvin', 33);
+INSERT INTO `competitor` VALUES (34, 'Bill', 'Bill', 'Bill', 'Bill', 'Bill', 'Jack', 'Jack', 'Jack', 'Jack', 34);
+INSERT INTO `competitor` VALUES (35, 'Jake', 'Jake', 'Jake', 'Jake', 'Jake', 'Ollie', 'Ollie', 'Ollie', 'Ollie', 35);
+INSERT INTO `competitor` VALUES (36, 'John', 'John', 'John', 'John', 'John', 'Andrew', 'Andrew', 'Andrew', 'Andrew', 36);
+INSERT INTO `competitor` VALUES (37, 'Stephen', 'Stephen', 'Stephen', 'Stephen', 'Stephen', 'Simon', 'Simon', 'Simon', 'Simon', 37);
+INSERT INTO `competitor` VALUES (38, 'Patrick', 'Patrick', 'Patrick', 'Patrick', 'Patrick', 'Sam', 'Sam', 'Sam', 'Sam', 38);
+INSERT INTO `competitor` VALUES (39, 'Jon', 'Jon', 'Jon', 'Jon', 'Jon', 'Harry', 'Harry', 'Harry', 'Harry', 39);
+INSERT INTO `competitor` VALUES (40, 'James', 'James', 'James', 'James', 'James', 'John', 'John', 'John', 'John', 40);
+INSERT INTO `competitor` VALUES (41, 'Chris', 'Chris', 'Chris', 'Chris', 'Chris', 'Lee', 'Lee', 'Lee', 'Lee', 41);
+INSERT INTO `competitor` VALUES (42, 'Jim', 'Jim', 'Jim', 'Jim', 'Jim', 'Ollie', 'Ollie', 'Ollie', 'Ollie', 42);
+INSERT INTO `competitor` VALUES (43, 'Leon', 'Leon', 'Leon', 'Leon', 'Leon', 'Chris', 'Chris', 'Chris', 'Chris', 43);
+INSERT INTO `competitor` VALUES (44, 'Chris', 'Chris', 'Chris', 'Chris', 'Chris', 'Jon', 'Jon', 'Jon', 'Jon', 44);
+INSERT INTO `competitor` VALUES (45, 'Mike', 'Mike', 'Mike', 'Mike', 'Mike', 'Jason', 'Jason', 'Jason', 'Jason', 45);
+INSERT INTO `competitor` VALUES (46, 'Simon', 'Simon', 'Simon', 'Simon', 'Simon', 'Carl', 'Carl', 'Carl', 'Carl', 46);
+INSERT INTO `competitor` VALUES (49, 'wefwe', 'dwe', 'wdwe', 'wde', 'wdew', 'wde', 'wde', 'wded', 'wedw', 49);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `crew`
+-- 
+
+CREATE TABLE `crew` (
+  `crew_id` int(8) unsigned NOT NULL auto_increment,
+  `crew_designation` char(1) character set hp8 NOT NULL default '',
+  `club_id` int(8) NOT NULL default '0',
+  `event_id` int(8) NOT NULL default '0',
+  PRIMARY KEY  (`crew_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=50 ;
+
+-- 
+-- Dumping data for table `crew`
+-- 
+
+INSERT INTO `crew` VALUES (1, 'A', 2, 1);
+INSERT INTO `crew` VALUES (2, 'A', 2, 9);
+INSERT INTO `crew` VALUES (3, 'A', 2, 12);
+INSERT INTO `crew` VALUES (4, 'A', 2, 4);
+INSERT INTO `crew` VALUES (5, 'A', 4, 1);
+INSERT INTO `crew` VALUES (6, 'A', 4, 4);
+INSERT INTO `crew` VALUES (7, 'A', 5, 1);
+INSERT INTO `crew` VALUES (8, 'B', 5, 1);
+INSERT INTO `crew` VALUES (9, 'B', 5, 2);
+INSERT INTO `crew` VALUES (10, 'A', 5, 3);
+INSERT INTO `crew` VALUES (11, 'A', 4, 8);
+INSERT INTO `crew` VALUES (12, 'A', 4, 2);
+INSERT INTO `crew` VALUES (13, 'A', 4, 3);
+INSERT INTO `crew` VALUES (14, 'A', 2, 2);
+INSERT INTO `crew` VALUES (15, 'A', 2, 3);
+INSERT INTO `crew` VALUES (16, 'A', 2, 8);
+INSERT INTO `crew` VALUES (17, 'A', 5, 2);
+INSERT INTO `crew` VALUES (19, 'A', 8, 1);
+INSERT INTO `crew` VALUES (20, 'A', 8, 2);
+INSERT INTO `crew` VALUES (21, 'A', 8, 3);
+INSERT INTO `crew` VALUES (22, 'A', 8, 4);
+INSERT INTO `crew` VALUES (23, 'A', 9, 1);
+INSERT INTO `crew` VALUES (24, 'B', 9, 1);
+INSERT INTO `crew` VALUES (25, 'A', 9, 2);
+INSERT INTO `crew` VALUES (26, 'A', 9, 3);
+INSERT INTO `crew` VALUES (27, 'A', 9, 4);
+INSERT INTO `crew` VALUES (28, 'A', 10, 1);
+INSERT INTO `crew` VALUES (29, 'A', 10, 2);
+INSERT INTO `crew` VALUES (30, 'A', 10, 3);
+INSERT INTO `crew` VALUES (31, 'A', 10, 4);
+INSERT INTO `crew` VALUES (32, 'A', 11, 1);
+INSERT INTO `crew` VALUES (33, 'A', 11, 3);
+INSERT INTO `crew` VALUES (34, 'A', 11, 2);
+INSERT INTO `crew` VALUES (35, 'A', 11, 4);
+INSERT INTO `crew` VALUES (36, 'A', 12, 1);
+INSERT INTO `crew` VALUES (37, 'A', 12, 2);
+INSERT INTO `crew` VALUES (38, 'A', 12, 3);
+INSERT INTO `crew` VALUES (39, 'A', 12, 4);
+INSERT INTO `crew` VALUES (40, 'A', 13, 1);
+INSERT INTO `crew` VALUES (41, 'A', 13, 2);
+INSERT INTO `crew` VALUES (42, 'A', 13, 3);
+INSERT INTO `crew` VALUES (43, 'A', 13, 4);
+INSERT INTO `crew` VALUES (44, 'A', 3, 1);
+INSERT INTO `crew` VALUES (45, 'A', 3, 2);
+INSERT INTO `crew` VALUES (46, 'A', 3, 3);
+INSERT INTO `crew` VALUES (49, 'A', 15, 1);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `event`
+-- 
+
+CREATE TABLE `event` (
+  `event_id` int(8) NOT NULL auto_increment,
+  `event_name` varchar(32) character set hp8 NOT NULL default '',
+  `event_type` varchar(32) character set hp8 NOT NULL default '',
+  PRIMARY KEY  (`event_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+
+-- 
+-- Dumping data for table `event`
+-- 
+
+INSERT INTO `event` VALUES (1, 'MS4x', 'Championship');
+INSERT INTO `event` VALUES (2, 'MJS4x', 'Championship');
+INSERT INTO `event` VALUES (3, 'MJ4x', 'Championship');
+INSERT INTO `event` VALUES (4, 'MN4x', 'Championship');
+INSERT INTO `event` VALUES (5, 'WS4x', 'Championship');
+INSERT INTO `event` VALUES (6, 'WJ4x', 'Championship');
+INSERT INTO `event` VALUES (7, 'WN4x', 'Championship');
+INSERT INTO `event` VALUES (8, 'MS4x', 'Invitation');
+INSERT INTO `event` VALUES (9, 'MJS4x', 'Invitation');
+INSERT INTO `event` VALUES (10, 'MJ4x', 'Invitation');
+INSERT INTO `event` VALUES (11, 'MN4x', 'Invitation');
+INSERT INTO `event` VALUES (12, 'WS4x', 'Invitation');
+INSERT INTO `event` VALUES (13, 'WJ4x', 'Invitation');
+INSERT INTO `event` VALUES (14, 'WN4x', 'Invitation');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `eventdetails`
+-- 
+
+CREATE TABLE `eventdetails` (
+  `eventdetails_id` int(8) NOT NULL auto_increment,
+  `event_id` int(8) NOT NULL default '0',
+  `crew_id` int(8) NOT NULL default '0',
+  `eventdetails_result` varchar(4) character set hp8 default NULL,
+  `eventdetails_time` varchar(32) character set hp8 default NULL,
+  PRIMARY KEY  (`eventdetails_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=46 ;
+
+-- 
+-- Dumping data for table `eventdetails`
+-- 
+
+INSERT INTO `eventdetails` VALUES (1, 1, 1, '1st', '09:18:36');
+INSERT INTO `eventdetails` VALUES (2, 9, 2, '', '');
+INSERT INTO `eventdetails` VALUES (3, 12, 3, '', '');
+INSERT INTO `eventdetails` VALUES (4, 4, 4, '', '');
+INSERT INTO `eventdetails` VALUES (5, 1, 5, '11th', '09:20:20');
+INSERT INTO `eventdetails` VALUES (6, 4, 6, '', '');
+INSERT INTO `eventdetails` VALUES (7, 1, 7, '2nd', '09:18:38');
+INSERT INTO `eventdetails` VALUES (8, 1, 8, '9th', '09:20:02');
+INSERT INTO `eventdetails` VALUES (9, 2, 9, '3rd', '09:18:44');
+INSERT INTO `eventdetails` VALUES (10, 3, 10, '', '');
+INSERT INTO `eventdetails` VALUES (11, 8, 11, '1st', '09:18:38');
+INSERT INTO `eventdetails` VALUES (12, 2, 12, '10th', '09:20:20');
+INSERT INTO `eventdetails` VALUES (13, 3, 13, '', '');
+INSERT INTO `eventdetails` VALUES (14, 2, 14, '1st', '09:17:31');
+INSERT INTO `eventdetails` VALUES (15, 3, 15, '2nd', '09:19:39');
+INSERT INTO `eventdetails` VALUES (16, 8, 16, '2nd', '09:20:20');
+INSERT INTO `eventdetails` VALUES (17, 2, 17, '2nd', '09:18:31');
+INSERT INTO `eventdetails` VALUES (18, 1, 19, '12th', '09:21:01');
+INSERT INTO `eventdetails` VALUES (19, 2, 20, '6th', '09:19:21');
+INSERT INTO `eventdetails` VALUES (20, 3, 21, '', '');
+INSERT INTO `eventdetails` VALUES (21, 4, 22, '', '');
+INSERT INTO `eventdetails` VALUES (22, 1, 23, '6th', '09:19:39');
+INSERT INTO `eventdetails` VALUES (23, 1, 24, '7th', '09:19:42');
+INSERT INTO `eventdetails` VALUES (24, 2, 25, '11th', '09:20:51');
+INSERT INTO `eventdetails` VALUES (25, 3, 26, '1st', '09:19:38');
+INSERT INTO `eventdetails` VALUES (26, 4, 27, '1st', '');
+INSERT INTO `eventdetails` VALUES (27, 1, 28, '10th', '09:20:12');
+INSERT INTO `eventdetails` VALUES (28, 2, 29, '5th', '09:19:02');
+INSERT INTO `eventdetails` VALUES (29, 3, 30, '3rd', '09:20:01');
+INSERT INTO `eventdetails` VALUES (30, 4, 31, '', '');
+INSERT INTO `eventdetails` VALUES (31, 1, 32, '8th', '09:19:55');
+INSERT INTO `eventdetails` VALUES (32, 3, 33, '', '');
+INSERT INTO `eventdetails` VALUES (33, 2, 34, '7th', '09:19:52');
+INSERT INTO `eventdetails` VALUES (34, 4, 35, '', '');
+INSERT INTO `eventdetails` VALUES (35, 1, 36, '5th', '09:19:32');
+INSERT INTO `eventdetails` VALUES (36, 2, 37, '9th', '09:20:07');
+INSERT INTO `eventdetails` VALUES (37, 3, 38, '', '');
+INSERT INTO `eventdetails` VALUES (38, 4, 39, '', '');
+INSERT INTO `eventdetails` VALUES (39, 1, 40, '4th', '09:19:12');
+INSERT INTO `eventdetails` VALUES (40, 2, 41, '8th', '09:20:01');
+INSERT INTO `eventdetails` VALUES (41, 3, 42, '', '');
+INSERT INTO `eventdetails` VALUES (42, 4, 43, '', '');
+INSERT INTO `eventdetails` VALUES (43, 1, 44, '3rd', '09:18:42');
+INSERT INTO `eventdetails` VALUES (44, 2, 45, '4th', '09:18:52');
+INSERT INTO `eventdetails` VALUES (45, 3, 46, '', '');

@@ -1,0 +1,175 @@
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	font:10pt Verdana, Arial, Helvetica, sans-serif;
+	background:#515259;
+	text-align:center;
+	color:#353635;
+}
+
+h1
+{
+	font:28pt georgia, verdana, arial, sans-serif;
+	color:#fff;
+	padding:20px;
+}
+
+h2
+{
+	font:14pt georgia, verdana, arial, sans-serif;
+	letter-spacing:-2px;
+	color:#304462;
+	border-bottom:1px solid #304462;
+	padding-bottom:5px;
+	text-align:left;
+}
+
+h3
+{
+	font-size:10pt;
+	letter-spacing:-1px;
+	color:#304462;
+	padding-bottom:5px;
+	text-align:left;
+	font-weight:700;
+}
+
+p
+{
+	font:8pt verdana,sans-serif;
+	text-align:left;
+	padding-top:15px;
+}
+
+table
+{
+	font:8pt verdana,sans-serif;
+	text-align:left;
+}
+
+#contain
+{
+	width:800px;
+	border:3px solid #fff;
+	background:#d1d8dd;
+	margin:10px auto;
+}
+
+#header
+{
+	height:200px;
+	border-bottom:1px solid #fff;
+	text-align:left;
+	background-repeat:no-repeat;
+	background-image:URL(http://www.matthewbull.com/dorneyscc/images/topbar.png);
+}
+
+#navbar
+{
+	border-top:3px solid #fff;
+	background:#43454B;
+	text-align:center;
+	font-family:helvetica, arial, verdana, tahoma, sans-serif;
+	letter-spacing:-1px;
+	font-size:130%;
+	height:30px;
+}
+
+#content h2
+{
+	margin:0 10px;
+}
+
+#content h3
+{
+	margin:10px 10px 0;
+}
+
+#content
+{
+	float:left;
+	margin-right:-1px;
+	width:799px;
+}
+
+#content p
+{
+	text-align:justify;
+	padding:0 10px;
+}
+
+#content a
+{
+	text-decoration:none;
+	color:#000066;
+}
+
+#content img
+{
+	float:right;
+	border:1px solid #FFF;
+	margin:10px 10px 10px 10px;
+}
+
+#content table
+{
+	padding:0 10px;
+}
+
+#footer
+{
+	clear:both;
+	text-align:right;
+	border-top:1px solid #fff;
+	padding:4px 4px 7px 0;
+	background-repeat:no-repeat;
+	background-image:URL(http://www.matthewbull.com/dorneyscc/images/footer.png);
+}
+
+* html #footer
+{
+	height:1%;
+}
+
+#footer a
+{
+	text-decoration:none;
+	font:8pt verdana, arial, sans-serif;
+	color:#fff;
+}
+
+#navbar a:hover
+{
+	color:#fff;
+	border-bottom:4px solid #fff;
+}
+
+#navbar a
+{
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:5px;
+	text-decoration:none;
+	color:#fff;
+	font:10pt verdana, arial, sans-serif;
+}
+
+#footer-nav a
+{
+	text-decoration:none;
+	color:#fff;
+	font:8pt verdana, arial, sans-serif;
+}
+
+hr
+{
+	border:0;
+	width:100%;
+	color:#fff;
+	background-color:#fff;
+	height:1px;
+}
